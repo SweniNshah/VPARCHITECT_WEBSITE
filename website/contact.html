@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — VP Architecture</title>
+  <meta name="description" content="Start a conversation with the studio. We work on projects of every scale, from private homes to public buildings.">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="hdr" data-header>
+    <div class="wrap hdr__in">
+      <a class="logo" href="index.html">VP Architecture<small>Architecture &amp; Interior Design</small></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="accomplishments.html">Accomplishments</a>
+        <a href="clients.html">Clients</a>
+        <a href="developers.html">Developers</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <button class="nav-toggle" data-nav-toggle aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-nav" data-mobile-nav>
+    <div class="wrap">
+      <div class="mobile-nav__head"><span class="logo">VP Architecture</span><button class="mobile-nav__x" data-nav-close aria-label="Close menu">&times;</button></div>
+      <nav class="mobile-nav__links" aria-label="Mobile">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="accomplishments.html">Accomplishments</a>
+        <a href="clients.html">Clients</a>
+        <a href="developers.html">Developers</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow reveal">Contact</p>
+        <h1 class="reveal">Let's build something considered.</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="eyebrow">Enquiries</p>
+            <p class="lead" style="color:var(--ink);max-width:44ch;margin-bottom:2.5rem;">Tell us about your site, your brief and your timeline. We work on projects of every scale, from private homes to public buildings.</p>
+            <div class="cdetail"><div class="k">Studio</div><div class="v">Ahmedabad, Gujarat, India</div></div>
+            <div class="cdetail"><div class="k">Email</div><div class="v"><a href="mailto:studio@vparchitecture.com">studio@vparchitecture.com</a></div></div>
+            <div class="cdetail"><div class="k">Phone</div><div class="v"><a href="tel:+910000000000">+91 00000 00000</a></div></div>
+          </div>
+
+          <div class="reveal">
+            <!-- To receive submissions: create a free form at https://formspree.io,
+                 then replace YOUR_FORM_ID below with your endpoint. Until then the
+                 form falls back to opening the visitor's email client. -->
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone (optional)</label>
+                <input type="tel" id="phone" name="phone">
+              </div>
+              <div class="field">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn">Send message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="ftr">
+    <div class="wrap">
+      <div class="ftr__grid">
+        <div>
+          <div class="ftr__brand">VP Architecture</div>
+          <p style="max-width:40ch;opacity:.8;">A husband-and-wife architecture practice with 25 years of designing considered, contextual spaces across India.</p>
+          <div class="ftr__social">
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <ul class="ftr__links">
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="accomplishments.html">Accomplishments</a></li>
+            <li><a href="clients.html">Clients</a></li>
+            <li><a href="developers.html">Developers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Studio</h4>
+          <ul class="ftr__links">
+            <li>Ahmedabad, Gujarat, India</li>
+            <li><a href="mailto:studio@vparchitecture.com">studio@vparchitecture.com</a></li>
+            <li><a href="tel:+910000000000">+91 00000 00000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ftr__bottom"><span>© 2026 VP Architecture. All rights reserved.</span><span>Design &amp; Architecture</span></div>
+    </div>
+  </footer>
+
+  <script>
+    // Fallback: if the Formspree endpoint hasn't been set, send via the visitor's email client.
+    (function () {
+      var form = document.querySelector('form[action*="formspree"]');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        if (form.getAttribute('action').indexOf('YOUR_FORM_ID') === -1) return; // real endpoint set — let it post
+        e.preventDefault();
+        var g = function (n) { var el = form.querySelector('[name="' + n + '"]'); return el ? el.value : ''; };
+        var body = encodeURIComponent('Name: ' + g('name') + '\nEmail: ' + g('email') + '\nPhone: ' + g('phone') + '\n\n' + g('message'));
+        window.location.href = 'mailto:studio@vparchitecture.com?subject=' + encodeURIComponent('Website enquiry from ' + g('name')) + '&body=' + body;
+      });
+    })();
+  </script>
+</body>
+</html>

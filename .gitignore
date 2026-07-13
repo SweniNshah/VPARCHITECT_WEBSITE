@@ -1,0 +1,12 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.tmp
+
+# Dependencies (if ever added)
+node_modules/
+
+# Local Claude Code settings (keep launch.json, ignore personal overrides)
+.claude/settings.local.json
