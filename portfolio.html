@@ -272,11 +272,18 @@ footer{background:var(--char);color:#efe9df}
   .tl-row{grid-template-columns:70px 1fr;gap:14px}
   .tl-tag{display:none}
   .drawer .dr-facts{grid-template-columns:1fr}
+  /* Hero: fill the screen like desktop instead of sitting at the bottom */
+  .hero{justify-content:center;padding-top:96px;padding-bottom:52px}
+  .hero h1{font-size:clamp(44px,12.5vw,96px);line-height:1.04}
+  .hero .eyebrow{margin-bottom:16px}
+  .hero-sub{margin-top:clamp(20px,4vh,36px)}
 }
 @media(max-width:560px){
   .foot-grid{grid-template-columns:1fr}
   .principal{flex-direction:column;align-items:flex-start}
   .about-stats{grid-template-columns:1fr;gap:26px}
+  .hero-sub{flex-direction:column;align-items:flex-start;gap:20px}
+  .hero-sub .scroll-ind{margin-top:4px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation-duration:.001ms !important;transition-duration:.001ms !important}
