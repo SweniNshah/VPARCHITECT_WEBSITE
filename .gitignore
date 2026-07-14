@@ -10,3 +10,10 @@ node_modules/
 
 # Local Claude Code settings (keep launch.json, ignore personal overrides)
 .claude/settings.local.json
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
