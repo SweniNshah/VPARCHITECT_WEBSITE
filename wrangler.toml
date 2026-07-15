@@ -1,6 +1,6 @@
 # Cloudflare Workers (static assets) config.
 # `wrangler deploy` uploads everything in ./deploy and serves it as a static site.
-name = "vparchitect-website"
+name = "vparchitectwebsite"
 compatibility_date = "2025-01-01"
 
 [assets]
