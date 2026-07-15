@@ -1,5 +1,7 @@
-# Cloudflare Pages config — makes Git-connected auto-deploy zero-config.
-# The site is a static build; Cloudflare serves everything in ./deploy as-is.
+# Cloudflare Workers (static assets) config.
+# `wrangler deploy` uploads everything in ./deploy and serves it as a static site.
 name = "vparchitect-website"
 compatibility_date = "2025-01-01"
-pages_build_output_dir = "deploy"
+
+[assets]
+directory = "./deploy"
